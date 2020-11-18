@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //function check isPrime
+        var isPrime=function(number){
+            var test=true;
+            if( number <2){
+                 test=false
+            }
+            for ( var i =2 ; i<number; i++){
+                  if( number % i === 0){
+                        test = false;
+                        break;
+                  }else{
+                      test = true;
+                  }
+            }
+           return test;
+        }
+    //function count isPrime
+         var printThePrime=function(){
+              for (var i = 0 ; i < 10000 ;i++){
+                  if( isPrime(i)){
+                      document.write(i+"<br>")
+                  }
+              }
+         }
+         printThePrime();
+</script>
+</html>
