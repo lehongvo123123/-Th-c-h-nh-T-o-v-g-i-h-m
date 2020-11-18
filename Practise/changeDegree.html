@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <h3> type a value in the Fahrenheit filed to convert th valae Celcius</h3>
+    <p>Fahrenheit</p> 
+    <input type="text"  id="inputDegree" placeholder="Please! fill in C degree">
+    <button id="clickButton">Click hear</button>
+     <button id="clickReset">Reset</button>
+    <h2 id="outputDegree">Result</h2>
+
+</body>
+<script>
+        
+        var outputDegreeOut =document.getElementById("outputDegree");
+        var clickButtonOut= document.getElementById("clickButton")
+        var clickResetOut= document.getElementById("clickReset")
+        var result;
+        //function change degree-------------
+        var changeDegree = function(){
+          var inputDegreeOut=parseFloat(document.getElementById("inputDegree").value); 
+                result = (inputDegreeOut-32)/1.8;
+                outputDegreeOut.textContent=result
+        }
+        clickButtonOut.addEventListener("click",changeDegree);
+        //function reset-------------
+        var resetResult=function(){
+            var inputDegreeOut=(document.getElementById("inputDegree").value);
+            outputDegreeOut.textContent=" ";
+        
+        }
+        clickResetOut.addEventListener("click",resetResult);
+        
+</script>
+</html>
