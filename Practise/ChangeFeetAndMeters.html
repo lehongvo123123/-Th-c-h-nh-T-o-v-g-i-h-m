@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Change Foot to Meters:
+  <input type="text" name="" id="inputFoot" placeholder="fill in foot(init)">  
+  <button id="clickFoot">Click</button>
+  <h3 id="resultInputFoot">Result</h3>
+    Change Meters to Foot:
+  <input type="text" name ="" id="inputMeters" placeholder="fill in meters (init)">
+  <button id="clickMeters">Click</button>
+  <h3 id="resultInputMeters">Result</h3>
+</body>
+<script>
+      var resultInputFoot=document.getElementById("resultInputFoot");
+      var resultInputMeters=document.getElementById("resultInputMeters");
+      var clickFoot=document.getElementById("clickFoot");
+      var clickMeters=document.getElementById("clickMeters")
+      //function change foot to meters
+       var changeFeed=function(){
+         var inputFoot=parseFloat(document.getElementById("inputFoot").value);
+             var test1= inputFoot*0.305;
+             resultInputFoot.textContent=test1;
+      }
+      clickFoot.addEventListener("click",changeFeed)
+      //function mester change to foot
+
+        var changeMeters=function(){
+          var inputMeters=parseFloat(document.getElementById("inputMeters").value);
+           var test2= inputMeters*3.279;
+           resultInputMeters.textContent=test2;
+        }
+        clickMeters.addEventListener("click",changeMeters)  
+
+</script>
+</html>
